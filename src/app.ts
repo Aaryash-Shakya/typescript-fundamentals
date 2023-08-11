@@ -82,7 +82,7 @@ let teacher:teacherInfo = {
   age: 40,
   subject: 'SAD',
 }
-let teacherList:teacherInfo[] = [
+let teachersList:teacherInfo[] = [
   {
     name: 'Shishir',
     age: 34,
@@ -113,3 +113,25 @@ class courses {
 }
 const course1 = new courses('BScCSIT',12345)
 console.log(course1.getCourse());
+
+// ! generics
+let teachersListGeneric:Array<teacherInfo> = [
+  {
+    name: 'Shishir',
+    age: 34,
+    subject: 'WT',
+  },
+  {
+    name: 'Manish',
+    age: 45,
+    subject: 'SAM',
+  }
+]
+// let numbers:Array<number> is generic syntax
+// both teachers:Array<teacherInfo> and teachers:teacherInfo[] can be used interchangeably
+const getStudentsListGeneric = (teachers:Array<teacherInfo>) =>{
+  teachers.forEach(teacher => {
+    console.log(`Sir ${teacher.name},age ${teacher.age} teaches ${teacher.subject}`);
+  });
+}
+getStudentsListGeneric(teachersListGeneric)
