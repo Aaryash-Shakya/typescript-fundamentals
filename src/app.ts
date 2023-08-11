@@ -129,6 +129,7 @@ let teachersListGeneric:Array<teacherInfo> = [
 ]
 // let numbers:Array<number> is generic syntax
 // both teachers:Array<teacherInfo> and teachers:teacherInfo[] can be used interchangeably
+// there is no functional difference between them
 const getStudentsListGeneric = (teachers:Array<teacherInfo>) =>{
   teachers.forEach(teacher => {
     console.log(`Sir ${teacher.name},age ${teacher.age} teaches ${teacher.subject}`);
