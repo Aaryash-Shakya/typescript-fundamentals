@@ -33,6 +33,7 @@ function getStudentsList(students) {
     });
 }
 getStudentsList(studentsList);
+// ! rest and default function
 // Rest parameter - allow to pass a variable number of arguments of same type
 function getNumbers(...nums) {
     nums.forEach((num) => {
@@ -47,4 +48,13 @@ function GetInfo(info = "happy") {
 }
 GetInfo("sad");
 GetInfo();
+// ! Anonymous and lambda function
+let studentName = function (lName, fName) {
+    return `${fName} ${lName}`;
+};
+console.log(studentName("Shakya", "Aaryash"));
+let studentContact = (phone, address) => {
+    return `Phone: ${phone} Address:${address}`;
+};
+console.log(studentContact(9861616161, 'Kathmandu'));
 //# sourceMappingURL=app.js.map
